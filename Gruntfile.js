@@ -1,44 +1,79 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
-    // Do grunt-related things in here
-    grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
-        sass: {
-            dist: {
-                files: {
-                    'app/sass/main.scss': 'app/styles/app.css'
-                }
-            },
-            options: {
-                sourceMap: true,
-                outputStyle: 'nested'
-            }
+  grunt.initConfig({
+    connect: {
+      server: {
+        options: {
+          hostname: '*',
+          port: 9000,
+          base: 'public/',
         },
-        watch: {
-            src: {
-                files: ['app/scripts/**/*.js', 'app/sass/**/*.scss', 'app/*.*'],
-                tasks: ['default'],
-            },
-        },
-        connect: {
-            server: {
-                options: {
-                    port: 8000,
-                    hostname: '*',
-                    base: 'app',
-                    livereload: true,
-                    keepalive: false,
-                }
-            }
+      }
+    },
+    open: {
+      server: {
+        path: 'localhost:9000',
+      }
+    },
+    clean: {
+      css: ['public/styles'],
+    },
+    sass: {
+      compile: {
+        files: [
+          {
+            dest: 'public/styles/main.css',
+            src: 'public/sass/main.scss'
+          },
+        ],
+        options: {
+          includePaths: [
+            'public/bower_components/animate.css/source/',
+            'public/bower_components/foundation/scss/',
+          ]
         }
-    });
+      },
+    },
+    postcss: {
+      options: {
+        map: false,
+        processors: [
+          require('autoprefixer-core')({browsers: 'last 2 version'}).postcss,
+          require('csswring').postcss
+        ],
+        outputStyle: 'nested',
+      },
+      dist: {
+        src: 'public/styles/main.css',
+        dest: 'public/styles/main.css'
+      }
+    },
+    watch: {
+      sass: {
+        files: ['public/**/*.scss'],
+        tasks: ['compile-sass']
+      },
+      js: {
+        files: ['public/**/*.js'],
+      },
+      html: {
+        files: ['public/**/*.html', 'public/**/*.hbs'],
+      },
+      options: {
+        livereload: true,
+        events: ['all'],
+      }
+    },
+  });
 
-    // Loading tasks
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-open');
 
-    grunt.registerTask('default', ['sass', 'connect', 'watch']);
+  grunt.registerTask('default', ['compile-sass', 'connect', 'watch']);
+  grunt.registerTask('compile-sass', ['sass', 'postcss']);
+
 };
