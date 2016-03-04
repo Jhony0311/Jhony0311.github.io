@@ -1,7 +1,15 @@
 body {
     background-color: $white;
+    padding: 0;
 }
 section {
     position: relative;
     height: 80vh;
+    margin: 0;
+    padding: 0 20px;
+}
+.vert-cntr {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
 }

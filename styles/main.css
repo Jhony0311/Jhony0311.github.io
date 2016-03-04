@@ -421,18 +421,31 @@ th {
 .icon-codepen:before {
   content: "\e90c"; }
 
+.icon-linkedin:before {
+  content: "\e90f"; }
+
 body {
   font-family: "Muli"; }
 
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
   font-family: "Philosopher"; }
 
 body {
-  background-color: #EDF0F7; }
+  background-color: #EDF0F7;
+  padding: 0; }
 
 section {
   position: relative;
-  height: 80vh; }
+  height: 80vh;
+  margin: 0;
+  padding: 0 20px; }
+
+.vert-cntr {
+  top: 50%;
+  position: relative;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 #landing {
   background: transparent url(../assets/images/codephoto.jpg) center no-repeat;
@@ -444,4 +457,26 @@ section {
     opacity: 0.7;
     position: absolute;
     right: 0;
-    top: 0; }
+    top: 0;
+    z-index: 0; }
+  #landing h1 {
+    font-size: 55px;
+    letter-spacing: .7px; }
+  #landing .main-info {
+    margin: 0 auto;
+    text-align: center;
+    color: #EDF0F7;
+    z-index: 1; }
+  #landing .subtitle {
+    margin-bottom: 20px; }
+  #landing [class^="icon-"],
+  #landing [class*=" icon-"] {
+    color: #F0C808;
+    font-size: 26px;
+    margin-right: 12px; }
+    #landing [class^="icon-"]:hover,
+    #landing [class*=" icon-"]:hover {
+      color: #DD1C1A; }
+    #landing [class^="icon-"]:last-child,
+    #landing [class*=" icon-"]:last-child {
+      margin-right: 0; }
