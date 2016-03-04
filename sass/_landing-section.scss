@@ -14,6 +14,10 @@
     h1 {
         font-size: 55px;
         letter-spacing: .7px;
+        text-shadow: #bbb 0 0 1px,
+                    $white 0 -1px 2px,
+                    $white 0 -3px 2px,
+                    rgba($black,0.8) 0 15px 15px;
     }
     .main-info {
         margin: 0 auto;
@@ -23,12 +27,15 @@
     }
     .subtitle {
         margin-bottom: 20px;
+        text-shadow: 1px 1px 2px $black;
     }
     [class^="icon-"],
     [class*=" icon-"] {
         color: $yellow;
         font-size: 26px;
         margin-right: 12px;
+        text-shadow: 1px 1px 3px $black;
+        text-decoration: none;
         &:hover {
             color: $red;
         }

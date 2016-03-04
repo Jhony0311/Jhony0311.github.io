@@ -461,19 +461,23 @@ section {
     z-index: 0; }
   #landing h1 {
     font-size: 55px;
-    letter-spacing: .7px; }
+    letter-spacing: .7px;
+    text-shadow: #bbb 0 0 1px, #EDF0F7 0 -1px 2px, #EDF0F7 0 -3px 2px, rgba(0, 0, 0, 0.8) 0 15px 15px; }
   #landing .main-info {
     margin: 0 auto;
     text-align: center;
     color: #EDF0F7;
     z-index: 1; }
   #landing .subtitle {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #000000; }
   #landing [class^="icon-"],
   #landing [class*=" icon-"] {
     color: #F0C808;
     font-size: 26px;
-    margin-right: 12px; }
+    margin-right: 12px;
+    text-shadow: 1px 1px 3px #000000;
+    text-decoration: none; }
     #landing [class^="icon-"]:hover,
     #landing [class*=" icon-"]:hover {
       color: #DD1C1A; }
