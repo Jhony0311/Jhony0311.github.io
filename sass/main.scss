@@ -1,7 +1,16 @@
+// Vendor stylesheets
+@import "vendors/normalize";
+
+
 // Base stylesheets
-@import "normalize";
-@import "variables";
-@import "fonts";
-@import "layout";
+@import "base/variables";
+@import "base/fonts";
+@import "base/media-queries";
+
+
+// Components stylesheets
+@import "components/sections";
+
+
 // Sections stylesheets
-@import "landing-section";
+@import "layouts/landing-section";
