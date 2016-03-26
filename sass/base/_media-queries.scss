@@ -29,6 +29,7 @@ $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (m
 
 /// Media Query mixin
 @mixin mq($breakpoint, $orientation: false) {
+    $query-string: "";
     @if $orientation {
         $query-string: "#{$breakpoint} + #{$orientation}";
     } else {

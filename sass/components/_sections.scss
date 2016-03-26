@@ -5,17 +5,31 @@ body {
 }
 section {
     position: relative;
-    height: 80vh;
     margin: 0;
     padding: 0 20px;
+}
+.inner-wrapper {
+    padding: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    @include mq($medium-up) {
+        padding: 16px;
+    }
+    @include mq($large-up) {
+        padding: 20px;
+    }
+}
+.section-content {
+    &.contain-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
 }
 .vert-cntr {
     top: 50%;
     position: relative;
     transform: translateY(-50%);
-}
-
-.inner-wrapper {
-    padding: 20px;
-
 }

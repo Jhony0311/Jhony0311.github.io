@@ -3,14 +3,19 @@
 
 
 // Base stylesheets
+@import "base/helpers";
 @import "base/variables";
 @import "base/fonts";
 @import "base/media-queries";
 
 
 // Components stylesheets
+@import "components/grid";
 @import "components/sections";
+@import "components/headings";
+@import "components/info-data";
 
 
 // Sections stylesheets
 @import "layouts/landing-section";
+@import "layouts/about-section";

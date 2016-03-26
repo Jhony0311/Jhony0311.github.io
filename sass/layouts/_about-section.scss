@@ -1,0 +1,18 @@
+.extract {
+    order: 1;
+    @include mq($large-up) {
+        order: 2;
+    }
+}
+.personal-info {
+    order: 2;
+    @include mq($large-up) {
+        order: 1;
+    }
+}
+.extract,
+.personal-info {
+    @include mq($small-only) {
+        flex-basis: 100% !important;    
+    }
+}

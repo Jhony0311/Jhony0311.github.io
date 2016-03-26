@@ -431,6 +431,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   font-family: "Philosopher"; }
 
+.column-2-2 {
+  -webkit-flex-basis: 49%;
+      -ms-flex-preferred-size: 49%;
+          flex-basis: 49%; }
+
 body {
   background-color: #EDF0F7;
   padding: 0;
@@ -438,9 +443,34 @@ body {
 
 section {
   position: relative;
-  height: 80vh;
   margin: 0;
   padding: 0 20px; }
+
+.inner-wrapper {
+  padding: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; }
+  @media only screen and (min-width: 40.063em) {
+    .inner-wrapper {
+      padding: 16px; } }
+  @media only screen and (min-width: 64em) {
+    .inner-wrapper {
+      padding: 20px; } }
+
+.section-content.contain-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
 .vert-cntr {
   top: 50%;
@@ -448,12 +478,51 @@ section {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.inner-wrapper {
-  padding: 20px; }
+.section-header {
+  display: inline-block;
+  padding: 5px 10px;
+  border-left: 3px solid #06AED5;
+  border-bottom: 3px solid #F0C808;
+  margin-bottom: 10px;
+  margin-left: -15px;
+  -webkit-transform: skewX(25deg);
+          transform: skewX(25deg); }
+  @media only screen and (min-width: 40.063em) {
+    .section-header {
+      padding: 8px 15px;
+      border-left: 5px solid #06AED5;
+      border-bottom: 5px solid #F0C808;
+      margin-bottom: 20px; } }
+  .section-header h2 {
+    line-height: 1;
+    margin: 0;
+    -webkit-transform: skewX(-25deg);
+            transform: skewX(-25deg);
+    text-shadow: 2px 1px 3px #404040; }
+
+.info-row {
+  clear: both;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 40.063em) {
+    .info-row {
+      margin-bottom: 15px; } }
+  .info-row .label,
+  .info-row .info-text {
+    display: block;
+    margin: 0; }
+    @media only screen and (min-width: 40.063em) {
+      .info-row .label,
+      .info-row .info-text {
+        display: inline-block; } }
+  .info-row .label {
+    font-family: "Montserrat"; }
 
 #landing {
   background: transparent url(../assets/images/codephoto.jpg) center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  height: 80vh; }
   #landing .opacity-layer {
     background-color: #086788;
     bottom: 0;
@@ -488,3 +557,30 @@ section {
     #landing [class^="icon-"]:last-child,
     #landing [class*=" icon-"]:last-child {
       margin-right: 0; }
+
+.extract {
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+  @media only screen and (min-width: 64em) {
+    .extract {
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; } }
+
+.personal-info {
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2; }
+  @media only screen and (min-width: 64em) {
+    .personal-info {
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; } }
+
+@media only screen and (max-width: 40em) {
+  .extract,
+  .personal-info {
+    -webkit-flex-basis: 100% !important;
+        -ms-flex-preferred-size: 100% !important;
+            flex-basis: 100% !important; } }
