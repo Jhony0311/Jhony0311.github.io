@@ -1,11 +1,23 @@
 /// Fonts variables
-$montserat: 'Montserrat';
-$muli: 'Muli';
-$philosopher: 'Philosopher';
+$amaranth: 'Amaranth';
+$rancho: 'rancho';
+$lato: 'Lato';
+$titleFont: $amaranth;
+$decoFont: $rancho;
+$paragraphFont: $lato;
+
 // Color palette
 $black: #000000;
-$red: #DD1C1A;
-$cyan: #06AED5;
-$blue: #086788;
-$yellow: #F0C808;
-$white: #EDF0F7;
+$cyan: #00D9EF;
+$blue: #0668F0;
+$yellow: #FFCA00;
+$baseWhite: #E4E4E4;
+$gray: #C4CFDC;
+$white: #FFFFFF;
+
+
+// Color settings
+$baseColor: $baseWhite;
+$primaryColor: $blue;
+$secondaryColor: $cyan;
+$accentColor: $yellow;

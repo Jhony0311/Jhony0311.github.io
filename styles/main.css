@@ -4,7 +4,7 @@
  * 2. Prevent iOS and IE text size adjust after device orientation change,
  *    without disabling user zoom.
  */
-@import "https://fonts.googleapis.com/css?family=Montserrat|Muli|Philosopher";
+@import "https://fonts.googleapis.com/css?family=Rancho|Lato|Amaranth";
 html {
   font-family: sans-serif;
   /* 1 */
@@ -425,11 +425,11 @@ th {
   content: "\e90f"; }
 
 body {
-  font-family: "Muli"; }
+  font-family: "Lato"; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  font-family: "Philosopher"; }
+  font-family: "Amaranth"; }
 
 .column-2-2 {
   -webkit-flex-basis: 49%;
@@ -437,14 +437,17 @@ h1, h2, h3, h4, h5, h6 {
           flex-basis: 49%; }
 
 body {
-  background-color: #EDF0F7;
+  background-color: #E4E4E4;
   padding: 0;
   font-size: 16px; }
 
 section {
   position: relative;
   margin: 0;
-  padding: 0 20px; }
+  padding: 0 20px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .inner-wrapper {
   padding: 12px;
@@ -481,8 +484,8 @@ section {
 .section-header {
   display: inline-block;
   padding: 5px 10px;
-  border-left: 3px solid #06AED5;
-  border-bottom: 3px solid #F0C808;
+  border-left: 3px solid #00D9EF;
+  border-bottom: 3px solid #FFCA00;
   margin-bottom: 10px;
   margin-left: -15px;
   -webkit-transform: skewX(25deg);
@@ -490,8 +493,8 @@ section {
   @media only screen and (min-width: 40.063em) {
     .section-header {
       padding: 8px 15px;
-      border-left: 5px solid #06AED5;
-      border-bottom: 5px solid #F0C808;
+      border-left: 5px solid #00D9EF;
+      border-bottom: 5px solid #FFCA00;
       margin-bottom: 20px; } }
   .section-header h2 {
     line-height: 1;
@@ -517,46 +520,86 @@ section {
       .info-row .info-text {
         display: inline-block; } }
   .info-row .label {
-    font-family: "Montserrat"; }
+    font-family: "rancho"; }
 
-#landing {
-  background: transparent url(../assets/images/codephoto.jpg) center no-repeat;
-  background-size: cover;
-  height: 80vh; }
-  #landing .opacity-layer {
-    background-color: #086788;
-    bottom: 0;
-    left: 0;
-    opacity: 0.7;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 0; }
-  #landing h1 {
-    font-size: 55px;
-    letter-spacing: .7px;
-    text-shadow: #bbb 0 0 1px, #EDF0F7 0 -1px 2px, #EDF0F7 0 -3px 2px, rgba(0, 0, 0, 0.8) 0 15px 15px; }
-  #landing .main-info {
-    margin: 0 auto;
-    text-align: center;
-    color: #EDF0F7;
-    z-index: 1; }
-  #landing .subtitle {
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px #000000; }
-  #landing [class^="icon-"],
-  #landing [class*=" icon-"] {
-    color: #F0C808;
-    font-size: 26px;
-    margin-right: 12px;
-    text-shadow: 1px 1px 3px #000000;
-    text-decoration: none; }
-    #landing [class^="icon-"]:hover,
-    #landing [class*=" icon-"]:hover {
-      color: #DD1C1A; }
-    #landing [class^="icon-"]:last-child,
-    #landing [class*=" icon-"]:last-child {
-      margin-right: 0; }
+.landing-section {
+  background: #0668F0;
+  height: 80vh;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  text-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
+  @media only screen and (min-width: 64em) {
+    .landing-section {
+      text-align: inherit; } }
+  .landing-section .display-block {
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto; }
+    .landing-section .display-block h1 {
+      text-shadow: 15px 14px 0 #00D9EF;
+      font-size: 75px;
+      letter-spacing: 2px;
+      color: #FFFFFF; }
+    .landing-section .display-block__tagline {
+      color: #FFFFFF;
+      font-family: "Lato";
+      font-size: 22px; }
+    .landing-section .display-block .tagline--decorative {
+      font-family: "rancho"; }
+      .landing-section .display-block .tagline--decorative:after {
+        margin-left: 5px;
+        content: " -"; }
+    .landing-section .display-block .tagline--regular {
+      font-family: inherit;
+      font-size: 18px; }
+    .landing-section .display-block__text {
+      color: #FFFFFF; }
+    .landing-section .display-block__links {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      text-align: center; }
+      @media only screen and (min-width: 64em) {
+        .landing-section .display-block__links {
+          max-width: 30%;
+          text-align: inherit;
+          -webkit-justify-content: space-between;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; } }
+    .landing-section .display-block a {
+      color: #FFFFFF;
+      font-size: 26px;
+      margin-right: 12px;
+      text-shadow: 1px 1px 3px #000000;
+      text-decoration: none; }
+      .landing-section .display-block a:hover {
+        color: #FFCA00; }
+      .landing-section .display-block a:last-child {
+        margin-right: 0; }
+  .landing-section .poster-block {
+    -webkit-flex: 1 1 0;
+        -ms-flex: 1 1 0;
+            flex: 1 1 0;
+    height: 100%;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+    .landing-section .poster-block__image {
+      width: 100%;
+      height: 100%;
+      background: #0668F0 url(http://41.media.tumblr.com/tumblr_lsb10mhLR81qikgdeo1_1280.png);
+      background-blend-mode: luminosity; }
 
 .extract {
   -webkit-order: 1;

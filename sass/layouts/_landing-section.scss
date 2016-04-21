@@ -1,47 +1,75 @@
-#landing {
-    background: transparent url(../assets/images/codephoto.jpg) center no-repeat;
-    background-size: cover;
+.landing-section {
+    background: $primaryColor;
     height: 80vh;
-    .opacity-layer {
-        background-color: $blue;
-        bottom: 0;
-        left: 0;
-        opacity: 0.7;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: 0;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    @include mq($large-up) {
+        text-align: inherit;
     }
-    h1 {
-        font-size: 55px;
-        letter-spacing: .7px;
-        text-shadow: #bbb 0 0 1px,
-                    $white 0 -1px 2px,
-                    $white 0 -3px 2px,
-                    rgba($black,0.8) 0 15px 15px;
-    }
-    .main-info {
-        margin: 0 auto;
-        text-align: center;
-        color: $white;
-        z-index: 1;
-    }
-    .subtitle {
-        margin-bottom: 20px;
-        text-shadow: 1px 1px 2px $black;
-    }
-    [class^="icon-"],
-    [class*=" icon-"] {
-        color: $yellow;
-        font-size: 26px;
-        margin-right: 12px;
-        text-shadow: 1px 1px 3px $black;
-        text-decoration: none;
-        &:hover {
-            color: $red;
+    .display-block {
+        flex: 1 1 auto;
+        h1 {
+            text-shadow: 15px 14px 0 $secondaryColor;
+            font-size: 75px;
+            letter-spacing: 2px;
+            color: $white;
         }
-        &:last-child {
-            margin-right: 0;
+        &__tagline {
+            color: $white;
+            font-family: $paragraphFont;
+            font-size: 22px;
+        }
+        .tagline {
+            &--decorative {
+                font-family: $decoFont;
+                &:after {
+                    margin-left: 5px;
+                    content: " -";
+                }
+            }
+            &--regular {
+                font-family: inherit;
+                font-size: 18px;
+            }
+        }
+        &__text {
+            color: $white;
+        }
+        &__links {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            @include mq($large-up) {
+                max-width: 30%;
+                text-align: inherit;
+                justify-content: space-between;
+            }
+        }
+        a {
+            color: $white;
+            font-size: 26px;
+            margin-right: 12px;
+            text-shadow: 1px 1px 3px $black;
+            text-decoration: none;
+            &:hover {
+                color: $accentColor;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .poster-block {
+        flex: 1 1 0;
+        height: 100%;
+        align-self: flex-end;
+        &__image {
+            width: 100%;
+            height: 100%;
+            background: $primaryColor url(http://41.media.tumblr.com/tumblr_lsb10mhLR81qikgdeo1_1280.png);
+            background-blend-mode: luminosity;
         }
     }
 }

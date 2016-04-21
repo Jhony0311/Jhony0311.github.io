@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Montserrat|Muli|Philosopher";
+@import "https://fonts.googleapis.com/css?family=Rancho|Lato|Amaranth";
 @font-face {
     font-family: 'glyphs';
     src: url('../assets/fonts/glyphs.eot?xtbwm8');
@@ -68,11 +68,12 @@
 .icon-linkedin:before {
     content: "\e90f";
 }
-// Text clasess
+
+// Text settings
 body {
-    font-family: $muli;
+    font-family: $paragraphFont;
 }
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
-    font-family: $philosopher;
+    font-family: $titleFont;
 }
