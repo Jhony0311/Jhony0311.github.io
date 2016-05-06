@@ -1,21 +1,29 @@
 .section-header {
     display: inline-block;
     padding: 5px 10px;
-    border-left: 3px solid $cyan;
-    border-bottom: 3px solid $yellow;
     margin-bottom: 10px;
     margin-left: -15px;
-    transform: skewX(25deg);
+    position: relative;
     @include mq($medium-up) {
+        font-size: 50px;
         padding: 8px 15px;
-        border-left: 5px solid $cyan;
-        border-bottom: 5px solid $yellow;
         margin-bottom: 20px;
     }
+    &:after {
+        background-color: $accentColor;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        right: -15px;
+        bottom: -15px;
+        z-index: -1;
+    }
     h2 {
+        font-weight: 700;
+        color: $primaryColor;
         line-height: 1;
         margin: 0;
-        transform: skewX(-25deg);
-        text-shadow: 2px 1px 3px lighten($black, 25);
     }
 }
