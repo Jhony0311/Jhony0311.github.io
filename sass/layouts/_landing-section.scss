@@ -1,22 +1,35 @@
 .landing-section {
-    background: linear-gradient($primaryColor 80%, lighten($primaryColor, 15) 90%, $secondaryColor);
-    height: 80vh;
+    // background: linear-gradient($primaryColor 80%, lighten($primaryColor, 15) 90%, $secondaryColor);
+    // background: linear-gradient(-45deg, $primaryColor 80%, lighten($primaryColor, 15) 90%, $secondaryColor), url(../assets/images/landing_bg.jpg);
+    // background-blend-mode: color;
+    // background-size: auto, cover;
+    // background-repeat: repeat, no-repeat;
+    // background-position: center;
+    min-height: 500px;
     flex-flow: row wrap;
     justify-content: space-around;
     text-align: center;
     align-items: center;
     @include mq($large-up) {
+        height: 80vh;
         text-align: inherit;
     }
     .display-block {
         flex: 1 1 auto;
-        h1 {
+        &__greeting {
+            color: $black;
+            font-family: $decoFont;
+        }
+        &__title {
             font-family: $decoFont;
             // text-shadow: 15px 14px 0 $secondaryColor;
-            font-size: 85px;
+            // font-size: 85px;
             letter-spacing: 3px;
-            color: $white;
+            color: $primaryColor;
             margin: 0 0 15px;
+            @include mq($large-up) {
+                font-size: 85px;
+            }
         }
         &__tagline {
             color: $black;
@@ -26,7 +39,7 @@
         }
         .tagline {
             &--decorative {
-                color: $white;
+                color: $black;
                 font-family: $decoFont;
             }
             &--regular {
@@ -37,7 +50,7 @@
         &__text {
             font-family: $paragraphFont;
             font-weight: 300;
-            color: $white;
+            color: $black;
         }
         &__links {
             display: flex;
@@ -46,7 +59,7 @@
             @include mq($large-up) {
                 max-width: 30%;
                 text-align: inherit;
-                justify-content: space-between;
+                justify-content: left;
             }
         }
         a {
@@ -56,22 +69,11 @@
             text-decoration: none;
             transition: .3s color ease-in-out;
             &:hover {
-                color: $baseWhite;
+                color: $secondaryColor;
             }
             &:last-child {
                 margin-right: 0;
             }
-        }
-    }
-    .poster-block {
-        flex: 1 1 0;
-        height: 100%;
-        align-self: flex-end;
-        &__image {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient($primaryColor 80%, lighten($primaryColor, 15) 90%, $secondaryColor), url(http://41.media.tumblr.com/tumblr_lsb10mhLR81qikgdeo1_1280.png);
-            background-blend-mode: color;
         }
     }
 }
