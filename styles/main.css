@@ -461,6 +461,27 @@ p {
       -ms-flex-preferred-size: 49%;
           flex-basis: 49%; }
 
+.jhony-logo .cls-1 {
+  fill: #ca611f; }
+
+.jhony-logo .cls-2 {
+  fill: #22354f; }
+
+.jhony-logo .cls-3 {
+  fill: #324671; }
+
+.jhony-logo .cls-4 {
+  fill: #d3804d; }
+
+.jhony-logo__name {
+  fill: #22354f; }
+
+.jhony-logo__gt-top, .jhony-logo__lt-top {
+  fill: #ca611f; }
+
+.jhony-logo__gt-bottom, .jhony-logo__lt-bottom {
+  fill: #d3804d; }
+
 body {
   padding: 0;
   font-size: 16px;
@@ -506,53 +527,6 @@ section {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
 
-.section-header {
-  display: inline-block;
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  margin-left: -15px;
-  position: relative; }
-  @media only screen and (min-width: 40.063em) {
-    .section-header {
-      font-size: 50px;
-      padding: 8px 15px;
-      margin-bottom: 20px; } }
-  .section-header:after {
-    background-color: #FFCA00;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    right: -15px;
-    bottom: -15px;
-    z-index: -1; }
-  .section-header h2 {
-    font-weight: 700;
-    color: #0668F0;
-    line-height: 1;
-    margin: 0; }
-
-.info-row {
-  clear: both;
-  overflow: hidden;
-  display: block;
-  margin-bottom: 10px; }
-  @media only screen and (min-width: 40.063em) {
-    .info-row {
-      margin-bottom: 15px; } }
-  .info-row .label,
-  .info-row .info-text {
-    display: block;
-    margin: 0; }
-    @media only screen and (min-width: 40.063em) {
-      .info-row .label,
-      .info-row .info-text {
-        display: inline-block; } }
-  .info-row .label {
-    font-family: "Titillium Web";
-    font-weight: 700; }
-
 .landing-section {
   min-height: 500px;
   -webkit-flex-flow: row wrap;
@@ -568,38 +542,32 @@ section {
           align-items: center; }
   @media only screen and (min-width: 64em) {
     .landing-section {
-      height: 80vh;
-      text-align: inherit; } }
+      height: 85vh; }
+      html.tablet .landing-section {
+        min-height: 1000px; } }
   .landing-section .display-block {
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
-            flex: 1 1 auto; }
+            flex: 1 1 auto;
+    color: #000000;
+    font-size: 20px; }
+    .landing-section .display-block__logo {
+      max-width: 200px;
+      max-height: 200px;
+      margin: 15px auto; }
+      .landing-section .display-block__logo svg {
+        width: 100%;
+        height: auto; }
     .landing-section .display-block__greeting {
-      color: #000000;
-      font-family: "Kaushan Script"; }
-    .landing-section .display-block__title {
-      font-family: "Kaushan Script";
-      letter-spacing: 3px;
-      color: #0668F0;
-      margin: 0 0 15px; }
-      @media only screen and (min-width: 64em) {
-        .landing-section .display-block__title {
-          font-size: 85px; } }
+      font-family: "Titillium Web"; }
     .landing-section .display-block__tagline {
-      color: #000000;
       font-family: "Titillium Web";
-      font-weight: 300;
-      font-size: 22px; }
+      font-weight: 300; }
     .landing-section .display-block .tagline--decorative {
-      color: #000000;
-      font-family: "Kaushan Script"; }
-    .landing-section .display-block .tagline--regular {
-      font-family: inherit;
-      font-size: 18px; }
-    .landing-section .display-block__text {
       font-family: "Titillium Web";
-      font-weight: 300;
-      color: #000000; }
+      font-weight: 700; }
+    .landing-section .display-block .tagline--regular {
+      font-family: inherit; }
     .landing-section .display-block__links {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -611,44 +579,15 @@ section {
       @media only screen and (min-width: 64em) {
         .landing-section .display-block__links {
           max-width: 30%;
+          margin: 20px auto;
           text-align: inherit;
           -webkit-justify-content: left;
               -ms-flex-pack: left;
                   justify-content: left; } }
     .landing-section .display-block a {
-      color: #FFCA00;
+      color: #d3804d;
       font-size: 26px;
-      margin-right: 12px;
       text-decoration: none;
       transition: .3s color ease-in-out; }
       .landing-section .display-block a:hover {
         color: #00D9EF; }
-      .landing-section .display-block a:last-child {
-        margin-right: 0; }
-
-.extract {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1; }
-  @media only screen and (min-width: 64em) {
-    .extract {
-      -webkit-order: 2;
-          -ms-flex-order: 2;
-              order: 2; } }
-
-.personal-info {
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
-  @media only screen and (min-width: 64em) {
-    .personal-info {
-      -webkit-order: 1;
-          -ms-flex-order: 1;
-              order: 1; } }
-
-@media only screen and (max-width: 40em) {
-  .extract,
-  .personal-info {
-    -webkit-flex-basis: 100% !important;
-        -ms-flex-preferred-size: 100% !important;
-            flex-basis: 100% !important; } }

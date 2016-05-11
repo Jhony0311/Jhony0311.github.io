@@ -1,56 +1,46 @@
 .landing-section {
+    // background: $primaryColor;
     // background: linear-gradient($primaryColor 80%, lighten($primaryColor, 15) 90%, $secondaryColor);
-    // background: linear-gradient(-45deg, $primaryColor 80%, lighten($primaryColor, 15) 90%, $secondaryColor), url(../assets/images/landing_bg.jpg);
-    // background-blend-mode: color;
-    // background-size: auto, cover;
-    // background-repeat: repeat, no-repeat;
-    // background-position: center;
     min-height: 500px;
     flex-flow: row wrap;
     justify-content: space-around;
     text-align: center;
     align-items: center;
     @include mq($large-up) {
-        height: 80vh;
-        text-align: inherit;
+        height: 85vh;
+        // Min height for toblet in pixes to avoid movement per url bar shrink or disappear
+        html.tablet & {
+            min-height: 1000px;
+        }
     }
     .display-block {
         flex: 1 1 auto;
-        &__greeting {
-            color: $black;
-            font-family: $decoFont;
-        }
-        &__title {
-            font-family: $decoFont;
-            // text-shadow: 15px 14px 0 $secondaryColor;
-            // font-size: 85px;
-            letter-spacing: 3px;
-            color: $primaryColor;
-            margin: 0 0 15px;
-            @include mq($large-up) {
-                font-size: 85px;
+        color: $black;
+        font-size: 20px;
+        &__logo {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 15px auto;
+            svg {
+                width: 100%;
+                height: auto;
             }
         }
+        &__greeting {
+            font-family: $paragraphFont;
+        }
         &__tagline {
-            color: $black;
             font-family: $paragraphFont;
             font-weight: 300;
-            font-size: 22px;
         }
         .tagline {
             &--decorative {
-                color: $black;
-                font-family: $decoFont;
+                font-family: $paragraphFont;
+                font-weight: 700;
             }
             &--regular {
                 font-family: inherit;
-                font-size: 18px;
             }
-        }
-        &__text {
-            font-family: $paragraphFont;
-            font-weight: 300;
-            color: $black;
         }
         &__links {
             display: flex;
@@ -58,21 +48,18 @@
             text-align: center;
             @include mq($large-up) {
                 max-width: 30%;
+                margin: 20px auto;
                 text-align: inherit;
                 justify-content: left;
             }
         }
         a {
-            color: $accentColor;
+            color: #d3804d;
             font-size: 26px;
-            margin-right: 12px;
             text-decoration: none;
             transition: .3s color ease-in-out;
             &:hover {
                 color: $secondaryColor;
-            }
-            &:last-child {
-                margin-right: 0;
             }
         }
     }
