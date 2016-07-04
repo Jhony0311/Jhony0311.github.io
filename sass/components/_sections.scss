@@ -3,37 +3,60 @@ body {
     font-size: 16px;
     background-color: $baseColor;
 }
-section {
+.section {
     position: relative;
     margin: 0;
-    padding: 0 20px;
     display: flex;
-    // background-image: linear-gradient(rgba($gray,.3) 1px, transparent 1px),
-    // linear-gradient(90deg, rgba($gray,.3) 1px, transparent 1px),
-    // linear-gradient(rgba($gray,.3) 1px, transparent 1px),
-    // linear-gradient(90deg, rgba($gray,.3) 1px, transparent 1px);
-    // background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
-    // background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px
+    flex-flow: row wrap;
+    &__header {
+        background: $primaryDarkColor;
+        box-shadow: 0 7px 0 5px rgba(darken($primaryColor, 10), .5);
+        flex-basis: 100%;
+        margin-bottom: 15px;
+        padding: 10px 20px;
+        @include mq($medium-up) {
+            margin-bottom: 25px;
+        }
+    }
+    &__title {
+        color: $white;
+        text-transform: uppercase;
+        margin: 0;
+        &::first-letter {
+            border-bottom: 5px solid currentColor;
+        }
+    }
+    &__content {
+        flex-basis: 100%;
+        &.contain-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+    }
+}
+// Modifiers for sections
+.section {
+    &--primary {
+        background: $primaryColor;
+    }
+    &--secondary {
+        background: $baseColor;
+    }
+    &--secondary &__header {
+        background: $secondaryDarkColor;
+        box-shadow: 0 7px 0 5px rgba(darken($secondaryColor, 10), .5);
+        text-align: right;
+    }
+    &--secondary &__title {
+        color: $primaryColor;
+    }
 }
 .inner-wrapper {
-    padding: 12px;
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    @include mq($medium-up) {
-        padding: 16px;
-    }
-    @include mq($large-up) {
-        padding: 20px;
-    }
-}
-.section-content {
-    &.contain-grid {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        flex-wrap: wrap;
-    }
 }
 .vert-cntr {
     top: 50%;

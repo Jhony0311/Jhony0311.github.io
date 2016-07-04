@@ -9,16 +9,19 @@ $decoFont: $scratch;
 
 // Color palette
 $black: #000000;
-$cyan: #00D9EF;
-$blue: #0668F0;
-$yellow: #FFCA00;
-$baseWhite: #f2f2f2;
-$gray: #C4CFDC;
+$blue: #324671;
+$darkBlue: #263a58;
+$baseWhite: #F7F7F8;
+$gray: #C2C3C9;
+$darkGray: #9fa5b5;
 $white: #FFFFFF;
+$orange: #d3804d;
 
 
 // Color settings
 $baseColor: $baseWhite;
+$primaryDarkColor: $darkBlue;
 $primaryColor: $blue;
-$secondaryColor: $cyan;
-$accentColor: $yellow;
+$secondaryDarkColor: $darkGray;
+$secondaryColor: $gray;
+$accentColor: $orange;

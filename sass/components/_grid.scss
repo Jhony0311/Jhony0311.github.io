@@ -1,5 +1,10 @@
-.column {
-    &-2-2 {
-        flex-basis: 49%;
+.grid {
+    display: flex;
+    flex-flow: column wrap;
+    &__column {
+        float: left;
+        &--2-2 {
+            flex-basis: 50%;
+        }
     }
 }

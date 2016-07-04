@@ -1,6 +1,5 @@
-.landing-section {
-    // background: $primaryColor;
-    // background: linear-gradient($primaryColor 80%, lighten($primaryColor, 15) 90%, $secondaryColor);
+.landing {
+    background: $baseColor;
     min-height: 500px;
     flex-flow: row wrap;
     justify-content: space-around;

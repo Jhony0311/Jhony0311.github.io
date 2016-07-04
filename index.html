@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="styles/main.css" />
     </head>
     <body>
-        <section id="landing" class="section landing-section">
+        <section id="landing" class="section landing">
             <div class="display-block">
                 <div class="display-block__greeting">I'm</div>
                 <div class="display-block__logo">
@@ -43,7 +43,7 @@
                     </svg>
                 </div>
                 <div class="display-block__tagline">
-                    <span class="tagline--decorative">Front End Engineer</span><br>based in Panama
+                    <span class="tagline--decorative">Front End Engineer</span><br>Based in Panama
                     <!-- based in <span class="tagline--decorative">Panama</span> -->
                 </div>
                 <div class="display-block__links">
@@ -55,16 +55,18 @@
                 </div>
             </div>
         </section>
-        <section id="info">
-            <div class="inner-wrapper">
-                <header class="section-header">
-                    <h2>About Me</h2>
-                </header>
-                <div class="section-content contain-grid">
-                    <div class="extract column-2-2">
+        <section id="info" class="section section--primary">
+            <header class="section__header">
+                <div class="inner-wrapper">
+                    <h2 class="section__title">About</h2>
+                </div>
+            </header>
+            <div class="section__content">
+                <div class="inner-wrapper grid">
+                    <div class="extract grid__column grid__column--2-2">
                         I'm an enthusiast human being who loves creating amazing experiences with code. I specialize on front end development going form consistent and well structured HTML and CSS, passing by pretty complex responsive sites to SPAs working with Javascript. I have accumulated a rich experience through every project tat I worked on not only on the tech side, but also in the team dynamic, professionalism and personal values. I'm a beliver that "every experience have something to teach".
                     </div>
-                    <div class="personal-info column-2-2">
+                    <div class="personal-info grid__column grid__column--2-2">
                         <div class="info-row">
                             <p class="label">Full name:</p>
                             <p class="info-text">Jonathan Ortega</p>
@@ -89,21 +91,29 @@
                 </div>
             </div>
         </section>
-        <section id="skills">
-            <div class="inner-wrapper">
-                <header class="section-header">
-                    <h2>My skills</h2>
-                </header>
-                <div class="section-content"></div>
-            </div>
+        <section id="skills" class="section section--secondary skills">
+            <header class="section__header">
+                <div class="inner-wrapper">
+                    <h2 class="section__title">Skills</h2>
+                </div>
+            </header>
+            <div class="section__content"></div>
         </section>
-        <section id="experience">
-            <div class="inner-wrapper">
-                <header class="section-header">
-                    <h2>Experience</h2>
-                </header>
-                <div class="section-content"></div>
-            </div>
+        <section id="experience" class="section section--primary experience">
+            <header class="section__header">
+                <div class="inner-wrapper">
+                    <h2 class="section__title">Experience</h2>
+                </div>
+            </header>
+            <div class="section__content"></div>
+        </section>
+        <section id="portfolio" class="section section--secondary portfolio">
+            <header class="section__header">
+                <div class="inner-wrapper">
+                    <h2 class="section__title">Portfolio</h2>
+                </div>
+            </header>
+            <div class="section__content"></div>
         </section>
     </body>
 </html>
