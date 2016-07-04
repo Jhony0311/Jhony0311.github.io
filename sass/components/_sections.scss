@@ -7,16 +7,12 @@ body {
     position: relative;
     margin: 0;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     &__header {
         background: $primaryDarkColor;
         box-shadow: 0 7px 0 5px rgba(darken($primaryColor, 10), .5);
         flex-basis: 100%;
-        margin-bottom: 15px;
         padding: 10px 20px;
-        @include mq($medium-up) {
-            margin-bottom: 25px;
-        }
     }
     &__title {
         color: $white;
@@ -28,6 +24,11 @@ body {
     }
     &__content {
         flex-basis: 100%;
+        position: relative;
+        padding-top: 10px;
+        @include mq($medium-up) {
+            padding-top: 15px;
+        }
         &.contain-grid {
             display: flex;
             justify-content: space-between;
@@ -40,6 +41,20 @@ body {
 .section {
     &--primary {
         background: $primaryColor;
+    }
+    &--primary &__content {
+        &::before {
+            content: " ";
+            display: block;
+            border-top: 175px solid transparent;
+            border-bottom: 175px solid transparent;
+            border-left: 50px solid $primaryDarkColor;
+            height: 0;
+            left: 0;
+            top: 0;
+            position: absolute;
+            width: 0;
+        }
     }
     &--secondary {
         background: $baseColor;
