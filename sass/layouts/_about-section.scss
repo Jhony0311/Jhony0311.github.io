@@ -1,18 +1,39 @@
 .extract {
-    order: 1;
+    margin-top: 10px;
     @include mq($large-up) {
-        order: 2;
+        margin-top: 25px;
+    }
+    &__title {
+        margin: 0;
+        text-transform: uppercase;
+    }
+    &__text {
+        text-align: justify;
     }
 }
 .personal-info {
-    order: 2;
-    @include mq($large-up) {
-        order: 1;
+
+    &__info-row {
+        width: 100%;
+        margin-bottom: 5px;
+        &:first-child {
+            margin-bottom: 8;
+        }
     }
-}
-.extract,
-.personal-info {
-    @include mq($small-only) {
-        flex-basis: 100% !important;    
+    &__info-text {
+        display: inline-block;
+        margin: 0;
+    }
+    &__label {
+        display: inline-block;
+        color: $accentColor;
+        font-weight: 700;
+        margin: 0;
+    }
+    &__fullname {
+        margin: 0;
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
     }
 }

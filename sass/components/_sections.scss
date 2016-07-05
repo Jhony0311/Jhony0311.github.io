@@ -2,32 +2,42 @@ body {
     padding: 0;
     font-size: 16px;
     background-color: $baseColor;
+    font-size-adjust: 0;
 }
 .section {
     position: relative;
     margin: 0;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     &__header {
         background: $primaryDarkColor;
-        box-shadow: 0 7px 0 5px rgba(darken($primaryColor, 10), .5);
+        box-shadow: 0 7px 0 5px rgba(darken($primaryColor, 8), .45);
         flex-basis: 100%;
         padding: 10px 20px;
     }
     &__title {
         color: $white;
-        text-transform: uppercase;
+        display: inline-block;
         margin: 0;
-        &::first-letter {
-            border-bottom: 5px solid currentColor;
+        padding: 0;
+        position: relative;
+        text-transform: uppercase;
+        &::before {
+            content: " ";
+            width: 20px;
+            height: 1px;
+            border-bottom: 2px solid currentColor;
+            position: absolute;
+            bottom: 0;
+            left: 0;
         }
     }
     &__content {
         flex-basis: 100%;
         position: relative;
-        padding-top: 10px;
+        padding: 25px 0;
         @include mq($medium-up) {
-            padding-top: 15px;
+            padding: 55px 0;
         }
         &.contain-grid {
             display: flex;
@@ -43,12 +53,14 @@ body {
         background: $primaryColor;
     }
     &--primary &__content {
+        background-image: url(../assets/images/blue_triangle.svg), url(../assets/images/circuit_design.svg);
+        background-position: left top, right center;
+        background-repeat: no-repeat;
+        background-size: contain, 245px;
+        color: $white;
         &::before {
             content: " ";
             display: block;
-            border-top: 175px solid transparent;
-            border-bottom: 175px solid transparent;
-            border-left: 50px solid $primaryDarkColor;
             height: 0;
             left: 0;
             top: 0;
@@ -57,7 +69,8 @@ body {
         }
     }
     &--secondary {
-        background: $baseColor;
+        background: $baseColor url(../assets/images/bg_web_pattern.svg) left top repeat;
+        background-size: 130px 150px;
     }
     &--secondary &__header {
         background: $secondaryDarkColor;
@@ -72,6 +85,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
+    width: 95%;
 }
 .vert-cntr {
     top: 50%;
