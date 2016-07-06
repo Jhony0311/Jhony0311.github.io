@@ -26,6 +26,7 @@ $xlarge-only: "#{$screen} and (min-width:#{lower-bound($xlarge-range)}) and (max
 $xxlarge-up: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)})";
 $xxlarge-only: "#{$screen} and (min-width:#{lower-bound($xxlarge-range)}) and (max-width:#{upper-bound($xxlarge-range)})";
 
+$mqs: (('small', $small-up), ('medium', $medium-up), ('large', $large-up), ('xlarge', $xlarge-up), ('xxlarge', $xxlarge-up));
 
 /// Media Query mixin
 @mixin mq($breakpoint, $orientation: false) {

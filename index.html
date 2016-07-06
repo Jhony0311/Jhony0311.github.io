@@ -14,7 +14,7 @@
     <body>
         <section id="landing" class="section landing">
             <div class="display-block">
-                <div class="display-block__greeting">I'm</div>
+                <div class="display-block__greeting">Hello I'm</div>
                 <div class="display-block__logo">
                     <svg class="jhony-logo" id="logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.52 46.5">
                         <path class="cls-1" d="M8.56,42.13l3-1.14v1L9.35,43l2.21,1.25v1l-3-1.47V42.13Z" transform="translate(-1.74 -6.75)"/><path class="cls-1" d="M13.09,46.41H11.92l2.13-6.06h1.16Z" transform="translate(-1.74 -6.75)"/>
@@ -44,18 +44,17 @@
                 </div>
                 <div class="display-block__tagline">
                     <span class="tagline--decorative">Front End Engineer</span><br>Based in Panama
-                    <!-- based in <span class="tagline--decorative">Panama</span> -->
                 </div>
-                <div class="display-block__links">
-                    <a target="_blank" href="https://twitter.com/Jhony0311" class="icon-twitter"></a>
-                    <a target="_blank" href="https://pa.linkedin.com/in/jonathan-ortega-22538724" class="icon-linkedin"></a>
-                    <a target="_blank" href="https://github.com/Jhony0311" class="icon-github"></a>
-                    <a target="_blank" href="https://plus.google.com/+JonathanOrtega0311" class="icon-google-plus"></a>
-                    <a target="_blank" href="http://codepen.io/Jhony0311/" class="icon-codepen"></a>
+                <div class="display-block__link-group">
+                    <a target="_blank" href="https://twitter.com/Jhony0311" class="icon-twitter display-block__link"></a>
+                    <a target="_blank" href="https://pa.linkedin.com/in/jonathan-ortega-22538724" class="icon-linkedin display-block__link"></a>
+                    <a target="_blank" href="https://github.com/Jhony0311" class="icon-github display-block__link"></a>
+                    <a target="_blank" href="https://plus.google.com/+JonathanOrtega0311" class="icon-google-plus display-block__link"></a>
+                    <a target="_blank" href="http://codepen.io/Jhony0311/" class="icon-codepen display-block__link"></a>
                 </div>
             </div>
         </section>
-        <section id="info" class="section section--primary">
+        <section id="info" class="about section section--primary">
             <header class="section__header">
                 <div class="inner-wrapper">
                     <h2 class="section__title">About</h2>
@@ -63,7 +62,7 @@
             </header>
             <div class="section__content">
                 <div class="inner-wrapper grid">
-                    <div class="grid__column grid__column--2-2">
+                    <div class="info-wrapper grid__column column--medium-2-2">
                         <div class="personal-info">
                             <div class="personal-info__info-row">
                                 <h3 class="personal-info__fullname">Jonathan Ortega</h3>
@@ -90,9 +89,9 @@
                             <p class="extract__text">I'm an enthusiast human being who loves creating amazing experiences with code. I specialize on front end development going form consistent and well structured HTML and CSS, passing by pretty complex responsive sites to SPAs working with Javascript. I have accumulated a rich experience through every project tat I worked on not only on the tech side, but also in the team dynamic, professionalism and personal values. I'm a beliver that "every experience have something to teach".</p>
                         </div>
                     </div>
-                    <div class="grid__column grid__column--2-2">
+                    <div class="portrait-wrapper grid__column column--medium-2-2">
                         <div class="portrait">
-                            
+                            <div class="portrait__image"></div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +111,38 @@
                     <h2 class="section__title">Experience</h2>
                 </div>
             </header>
-            <div class="section__content"></div>
+            <div class="section__content">
+                <div class="inner-wrapper">
+                    <div class="job-item">
+                        <div class="grid">
+                            <div class="grid__column column--large-1-3">
+                                <div class="job-item__position">Front End Developer</div>
+                                <div class="job-item__company">Modop</div>
+                                <div class="job-item__time-frame">2013 - Today</div>
+                            </div>
+                            <div class="grid__column column--large-2-3">
+                                <ul class="job-item__duty-list">
+                                    <li class="job-item__duty">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dicta, eveniet laudantium laboriosam earum.
+                                    </li>
+                                    <li class="job-item__duty">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dicta, eveniet laudantium laboriosam earum.
+                                    </li>
+                                    <li class="job-item__duty">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dicta, eveniet laudantium laboriosam earum.
+                                    </li>
+                                    <li class="job-item__duty">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dicta, eveniet laudantium laboriosam earum.
+                                    </li>
+                                    <li class="job-item__duty">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi dicta, eveniet laudantium laboriosam earum.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="portfolio" class="section section--secondary portfolio">
             <header class="section__header">

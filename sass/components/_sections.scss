@@ -53,11 +53,16 @@ body {
         background: $primaryColor;
     }
     &--primary &__content {
-        background-image: url(../assets/images/blue_triangle.svg), url(../assets/images/circuit_design.svg);
-        background-position: left top, right center;
+        background-image: url(../assets/images/circuit_design.svg);
+        background-position: right center;
         background-repeat: no-repeat;
-        background-size: contain, 245px;
+        background-size: contain;
         color: $white;
+        @include mq($medium-up) {
+            background-image: url(../assets/images/blue_triangle.svg), url(../assets/images/circuit_design.svg);
+            background-position: left top, right center;
+            background-size: contain;
+        }
         &::before {
             content: " ";
             display: block;

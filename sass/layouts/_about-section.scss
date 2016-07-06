@@ -1,3 +1,19 @@
+.about {
+    .inner-wrapper {
+        overflow: visible;
+    }
+}
+.info-wrapper {
+    order: 1;
+}
+.portrait-wrapper {
+    order: -1;
+    padding-bottom: 25%;
+    @include mq($medium-up) {
+        order: 2;
+        padding-bottom: 0;
+    }
+}
 .extract {
     margin-top: 10px;
     @include mq($large-up) {
@@ -12,7 +28,6 @@
     }
 }
 .personal-info {
-
     &__info-row {
         width: 100%;
         margin-bottom: 5px;
@@ -35,5 +50,27 @@
         font-weight: 700;
         font-size: 2rem;
         text-transform: uppercase;
+    }
+}
+.portrait {
+    background: $secondaryColor;
+    box-shadow: 20px 0 0 rgba($black, .5);
+    border-radius: 20px;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 45%;
+    position: relative;
+    transform-origin: center;
+    transform: translateY(15%) rotate(45deg);
+    width: 45%;
+    &__image {
+        background: transparent url(../assets/images/landing_bg.jpg) center no-repeat;
+        background-size: cover;
+        height: 150%;
+        left: -25%;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: -25%;
+        width: 150%;
     }
 }
