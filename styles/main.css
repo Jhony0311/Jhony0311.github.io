@@ -693,24 +693,27 @@ body {
   background: #324671; }
 
 .section--primary .section__content {
-  background-image: url(../assets/images/circuit_design.svg);
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  padding-bottom: 50px; }
   @media only screen and (min-width: 40.063em) {
     .section--primary .section__content {
       background-image: url(../assets/images/blue_triangle.svg), url(../assets/images/circuit_design.svg);
       background-position: left top, right center;
-      background-size: contain; } }
+      background-size: contain, 22%;
+      background-repeat: no-repeat, repeat-y;
+      padding-bottom: 25px; } }
   .section--primary .section__content::before {
+    background-size: contain;
+    bottom: 0;
     content: " ";
     display: block;
-    height: 0;
+    height: 200px;
     left: 0;
-    top: 0;
     position: absolute;
-    width: 0; }
+    width: 100%; }
+    @media only screen and (min-width: 40.063em) {
+      .section--primary .section__content::before {
+        display: none; } }
 
 .section--secondary {
   background: #F7F7F8 url(../assets/images/bg_web_pattern.svg) left top repeat;
@@ -735,6 +738,42 @@ body {
   position: relative;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
+
+.job-item {
+  margin-bottom: 10px; }
+  @media only screen and (min-width: 40.063em) {
+    .job-item {
+      margin-bottom: 22px; } }
+  .job-item__position, .job-item__company {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .job-item__company {
+    color: #d3804d; }
+    .job-item__company--lowercased {
+      text-transform: lowercase; }
+  .job-item__time-frame {
+    font-size: 20px;
+    font-weight: 300; }
+  .job-item__duty-list {
+    list-style: none;
+    padding: 0;
+    text-align: justify; }
+    @media only screen and (min-width: 40.063em) {
+      .job-item__duty-list {
+        padding: 0 0 0 20px; } }
+    @media only screen and (min-width: 64em) {
+      .job-item__duty-list {
+        padding: 0 0 0 30px; } }
+  .job-item__duty {
+    line-height: 1.5; }
+    .job-item__duty::before {
+      display: inline-block;
+      content: ">";
+      font-size: 110%;
+      margin-right: 3px;
+      left: -16px;
+      line-height: inherit; }
 
 .landing {
   background: #F7F7F8 url(../assets/images/bg_web_pattern.svg) left top repeat;
@@ -772,12 +811,15 @@ body {
         width: 100%;
         height: auto; }
     .landing .display-block__greeting {
-      font-family: "Titillium Web"; }
+      color: #263a58;
+      font-family: "Titillium Web";
+      font-weight: 700;
+      font-size: 1.8rem; }
     .landing .display-block__tagline {
+      color: #263a58;
       font-family: "Titillium Web";
       font-weight: 300; }
     .landing .display-block .tagline--decorative {
-      font-family: "Titillium Web";
       font-weight: 700; }
     .landing .display-block .tagline--regular {
       font-family: inherit; }
@@ -802,7 +844,8 @@ body {
       color: #d3804d;
       font-size: 26px;
       text-decoration: none;
-      transition: .3s color ease-in-out; }
+      transition: .3s color ease-in-out;
+      outline: 0; }
       html.desktop .landing .display-block__link:hover {
         color: #263a58; }
 
@@ -859,7 +902,7 @@ body {
   font-size: 2rem;
   text-transform: uppercase; }
 
-.portrait {
+.profile {
   background: #C2C3C9;
   box-shadow: 20px 0 0 rgba(0, 0, 0, 0.5);
   border-radius: 20px;
@@ -872,9 +915,15 @@ body {
   -webkit-transform: translateY(15%) rotate(45deg);
           transform: translateY(15%) rotate(45deg);
   width: 45%; }
-  .portrait__image {
-    background: transparent url(../assets/images/landing_bg.jpg) center no-repeat;
-    background-size: cover;
+  @media only screen and (min-width: 40.063em) and (max-width: 63.938em) {
+    .profile {
+      padding-bottom: 70%;
+      -webkit-transform: translateY(18%) rotate(45deg);
+              transform: translateY(18%) rotate(45deg);
+      width: 70%; } }
+  .profile__image {
+    background: transparent url(../assets/images/portrait2.jpg) top center no-repeat;
+    background-size: 91%;
     height: 150%;
     left: -25%;
     position: absolute;
@@ -882,3 +931,7 @@ body {
             transform: rotate(-45deg);
     top: -25%;
     width: 150%; }
+
+@media only screen and (min-width: 40.063em) {
+  .experience .company-wrapper {
+    border-right: 1px solid #FFFFFF; } }

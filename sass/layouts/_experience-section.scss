@@ -1,0 +1,7 @@
+.experience {
+    .company-wrapper {
+        @include mq($medium-up) {
+            border-right: 1px solid $white;
+        }
+    }
+}

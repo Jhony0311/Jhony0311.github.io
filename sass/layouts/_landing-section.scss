@@ -29,15 +29,18 @@
             }
         }
         &__greeting {
+            color: $primaryDarkColor;
             font-family: $paragraphFont;
+            font-weight: 700;
+            font-size: 1.8rem;
         }
         &__tagline {
+            color: $primaryDarkColor;
             font-family: $paragraphFont;
             font-weight: 300;
         }
         .tagline {
             &--decorative {
-                font-family: $paragraphFont;
                 font-weight: 700;
             }
             &--regular {
@@ -61,6 +64,7 @@
             font-size: 26px;
             text-decoration: none;
             transition: .3s color ease-in-out;
+            outline: 0;
             html.desktop &:hover {
                 color: $primaryDarkColor;
             }

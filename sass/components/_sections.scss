@@ -53,24 +53,28 @@ body {
         background: $primaryColor;
     }
     &--primary &__content {
-        background-image: url(../assets/images/circuit_design.svg);
-        background-position: right center;
-        background-repeat: no-repeat;
-        background-size: contain;
         color: $white;
+        padding-bottom: 50px;
         @include mq($medium-up) {
             background-image: url(../assets/images/blue_triangle.svg), url(../assets/images/circuit_design.svg);
             background-position: left top, right center;
-            background-size: contain;
+            background-size: contain, 22%;
+            background-repeat: no-repeat, repeat-y;
+            padding-bottom: 25px;
         }
         &::before {
+            // background: transparent url(../assets/images/circuit_design_horizontal.svg) left bottom repeat-x;
+            background-size: contain;;
+            bottom: 0;
             content: " ";
             display: block;
-            height: 0;
+            height: 200px;
             left: 0;
-            top: 0;
             position: absolute;
-            width: 0;
+            width: 100%;
+            @include mq($medium-up) {
+                display: none;
+            }
         }
     }
     &--secondary {

@@ -1,0 +1,47 @@
+.job-item {
+    margin-bottom: 10px;
+    @include mq($medium-up) {
+        margin-bottom: 22px;
+    }
+    &__position,
+    &__company {
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__position {
+
+    }
+    &__company {
+        color: $accentColor;
+        &--lowercased {
+            text-transform: lowercase;
+        }
+    }
+    &__time-frame {
+        font-size: 20px;
+        font-weight: 300;
+    }
+    &__duty-list {
+        list-style: none;
+        padding: 0;
+        text-align: justify;
+        @include mq($medium-up) {
+            padding: 0 0 0 20px;
+        }
+        @include mq($large-up) {
+            padding: 0 0 0 30px;
+        }
+    }
+    &__duty {
+        line-height: 1.5;
+        &::before {
+            display: inline-block;
+            content: ">";
+            font-size: 110%;
+            margin-right: 3px;
+            left: -16px;
+            line-height: inherit;
+        }
+    }
+}
