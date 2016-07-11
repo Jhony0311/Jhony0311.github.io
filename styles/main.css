@@ -457,6 +457,36 @@ p {
   font-size: 1em;
   line-height: 1; }
 
+.header {
+  position: fixed; }
+
+.footer {
+  background-image: linear-gradient(#F7F7F8, #F7F7F8), url(../assets/images/bg_web_pattern.svg);
+  background-repeat: repeat;
+  background-size: 130px 150px;
+  background-blend-mode: soft-light;
+  padding: 10px;
+  text-align: center; }
+  @media only screen and (min-width: 40.063em) {
+    .footer {
+      padding: 25px 10px; } }
+  .footer__text {
+    color: #9fa5b5;
+    line-height: 1;
+    margin: 0; }
+    @media only screen and (min-width: 40.063em) {
+      .footer__text {
+        font-size: 18px;
+        font-weight: 500; } }
+    @media only screen and (min-width: 64em) {
+      .footer__text {
+        font-size: 24px; } }
+  .footer__link {
+    color: #9fa5b5;
+    line-height: 1;
+    margin: 0;
+    text-decoration: none; }
+
 .jhony-logo .cls-1 {
   fill: #ca611f; }
 
@@ -653,6 +683,7 @@ body {
     padding: 10px 20px; }
   .section__title {
     color: #FFFFFF;
+    cursor: default;
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -756,6 +787,7 @@ body {
     font-size: 20px;
     font-weight: 300; }
   .job-item__duty-list {
+    margin: 0;
     list-style: none;
     padding: 0;
     text-align: justify; }
