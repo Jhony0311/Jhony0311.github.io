@@ -1,3 +1,20 @@
 .header {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 15px;
     position: fixed;
+    width: 100%;
+    z-index: 10;
+    @include mq($medium-up) {
+        padding: 25px;
+    }
+    @include mq($medium-up) {
+        padding: 25px 40px;
+    }
+    &__logo {
+        cursor: pointer;
+        height: auto;
+        width: 100px;
+    }
 }

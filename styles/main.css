@@ -458,7 +458,27 @@ p {
   line-height: 1; }
 
 .header {
-  position: fixed; }
+  box-sizing: border-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 10; }
+  @media only screen and (min-width: 40.063em) {
+    .header {
+      padding: 25px; } }
+  @media only screen and (min-width: 40.063em) {
+    .header {
+      padding: 25px 40px; } }
+  .header__logo {
+    cursor: pointer;
+    height: auto;
+    width: 100px; }
 
 .footer {
   background-image: linear-gradient(#F7F7F8, #F7F7F8), url(../assets/images/bg_web_pattern.svg);
