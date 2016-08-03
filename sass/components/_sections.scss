@@ -96,6 +96,9 @@ body {
     margin: 0 auto;
     overflow: hidden;
     width: 95%;
+    @include mq($medium-up) {
+        width: 98%;
+    }
 }
 .vert-cntr {
     top: 50%;

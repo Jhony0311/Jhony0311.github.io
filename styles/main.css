@@ -679,6 +679,58 @@ p {
               -ms-flex-preferred-size: 66.6666666667%;
                   flex-basis: 66.6666666667%; } }
 
+.badges-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.badge {
+  border-radius: 0 0 50% 50%;
+  margin: 15px 0;
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  padding-bottom: 53%;
+  position: relative; }
+  @media only screen and (min-width: 40.063em) {
+    .badge {
+      background-color: rgba(38, 58, 88, 0.1);
+      box-shadow: 5px 5px 0 3px rgba(167, 168, 177, 0.5);
+      -webkit-flex-basis: 15%;
+          -ms-flex-preferred-size: 15%;
+              flex-basis: 15%;
+      margin: 15px 1.5%;
+      padding-bottom: 17%; } }
+  @media only screen and (min-width: 64em) {
+    .badge {
+      -webkit-flex-basis: 15%;
+          -ms-flex-preferred-size: 15%;
+              flex-basis: 15%;
+      margin: 15px 3.5%;
+      padding-bottom: 17%; } }
+  .badge__fill {
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; }
+  .badge__logo {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-63%);
+            transform: translateY(-63%);
+    width: 80%; }
+
 body {
   padding: 0;
   font-size: 16px;
@@ -783,6 +835,9 @@ body {
   margin: 0 auto;
   overflow: hidden;
   width: 95%; }
+  @media only screen and (min-width: 40.063em) {
+    .inner-wrapper {
+      width: 98%; } }
 
 .vert-cntr {
   top: 50%;
