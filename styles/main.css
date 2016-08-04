@@ -716,13 +716,19 @@ p {
           justify-content: center; }
 
 .badge {
+  box-sizing: border-box;
   border-radius: 0 0 50% 50%;
+  height: auto;
   margin: 15px 0;
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
-  padding-bottom: 53%;
   position: relative; }
+  .badge::after {
+    content: '';
+    display: block;
+    height: auto;
+    padding-bottom: 110%; }
   @media only screen and (min-width: 40.063em) {
     .badge {
       background-color: rgba(38, 58, 88, 0.1);
@@ -730,21 +736,21 @@ p {
       -webkit-flex-basis: 15%;
           -ms-flex-preferred-size: 15%;
               flex-basis: 15%;
-      margin: 15px 1.5%;
-      padding-bottom: 17%; } }
+      margin: 15px 1.5%; } }
   @media only screen and (min-width: 64em) {
     .badge {
       -webkit-flex-basis: 15%;
           -ms-flex-preferred-size: 15%;
               flex-basis: 15%;
-      margin: 15px 3.5%;
-      padding-bottom: 17%; } }
+      margin: 15px 3.5%; } }
   .badge__fill {
     border-radius: 0 0 50% 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    bottom: 0;
     height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 100%; }
   .badge__logo {
     display: block;
@@ -752,8 +758,8 @@ p {
     height: auto;
     position: relative;
     top: 50%;
-    -webkit-transform: translateY(-63%);
-            transform: translateY(-63%);
+    -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
     width: 80%; }
 
 body {
@@ -968,10 +974,7 @@ body {
         .landing .display-block__link-group {
           max-width: 30%;
           margin: 30px auto;
-          text-align: inherit;
-          -webkit-justify-content: left;
-              -ms-flex-pack: left;
-                  justify-content: left; } }
+          text-align: inherit; } }
     .landing .display-block__link {
       color: #d3804d;
       font-size: 26px;

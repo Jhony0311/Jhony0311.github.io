@@ -4,30 +4,40 @@
     justify-content: center;
 }
 .badge {
+    box-sizing: border-box;
     border-radius: 0 0 50% 50%;
+    height: auto;
     margin: 15px 0;
     flex-basis: 50%;
-    padding-bottom: 53%;
+    // padding-bottom: 53%;
     position: relative;
+    &::after {
+        content: '';
+        display: block;
+        height: auto;
+        padding-bottom: 110%;
+    }
     @include mq($medium-up) {
         background-color: rgba($primaryDarkColor, .1);
         box-shadow: 5px 5px 0 3px rgba(darken($secondaryColor, 10), .5);
         flex-basis: 15%;
         margin: 15px 1.5%;
-        padding-bottom: 17%;
+        // padding-bottom: 17%;
     }
     @include mq($large-up) {
         flex-basis: 15%;
         margin: 15px 3.5%;
-        padding-bottom: 17%;
+        // padding-bottom: 17%;
     }
     &__fill {
         // background-color: $accentColor;
         border-radius: 0 0 50% 50%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        bottom: 0;
         height: 100%;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
         width: 100%;
     }
     &__logo {
@@ -36,7 +46,7 @@
         height: auto;
         position: relative;
         top: 50%;
-        transform: translateY(-63%);
+        transform: translateY(-55%);
         width: 80%;
     }
 }

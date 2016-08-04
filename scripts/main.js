@@ -16,7 +16,12 @@
         link.addEventListener('click', function(e) {
             console.log(e);
             e.preventDefault();
+            var target = e.srcElement.hash;
+            // jump(target, {
+            //     duration: 500,
+            //     offset: headerBar.getAttribute('height')
+            // });
             return false;
         })
-    })
+    }.bind(this));
 }());
