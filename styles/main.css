@@ -462,23 +462,48 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column wrap;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  height: auto;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  overflow: hidden;
   padding: 15px;
   position: fixed;
+  transition: .4s all ease-in-out;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   z-index: 10; }
   @media only screen and (min-width: 40.063em) {
     .header {
-      padding: 25px; } }
+      padding: 25px 25px 28px; } }
   @media only screen and (min-width: 40.063em) {
     .header {
-      padding: 25px 40px; } }
+      padding: 10px 40px 14px; } }
   .header__logo {
     cursor: pointer;
     height: auto;
-    width: 100px; }
+    width: 70px; }
+  .header--scrolled {
+    background-color: #F7F7F8;
+    box-shadow: 0 7px 0 5px rgba(190, 101, 47, 0.5); }
+  .header .navigation {
+    display: inline-block;
+    overflow: hidden;
+    height: auto; }
+    .header .navigation__link {
+      color: #263a58;
+      text-decoration: none;
+      padding: 0 7px;
+      outline: 0; }
+      @media only screen and (min-width: 40.063em) {
+        .header .navigation__link {
+          font-size: 18px;
+          padding: 0 15px; } }
 
 .footer {
   background-image: linear-gradient(#F7F7F8, #F7F7F8), url(../assets/images/bg_web_pattern.svg);
@@ -735,7 +760,7 @@ body {
   padding: 0;
   font-size: 16px;
   background-color: #F7F7F8;
-  font-size-adjust: 0; }
+  font-size-adjust: none; }
 
 .section {
   position: relative;
@@ -800,7 +825,7 @@ body {
   padding-bottom: 50px; }
   @media only screen and (min-width: 40.063em) {
     .section--primary .section__content {
-      background-image: url(../assets/images/blue_triangle.svg), url(../assets/images/circuit_design.svg);
+      background-image: url(../assets/images/blue_triangle.svg), url("../assets/images/circuit_design.svg");
       background-position: left top, right center;
       background-size: contain, 22%;
       background-repeat: no-repeat, repeat-y;
@@ -819,7 +844,7 @@ body {
         display: none; } }
 
 .section--secondary {
-  background: #F7F7F8 url(../assets/images/bg_web_pattern.svg) left top repeat;
+  background: #F7F7F8 url("../assets/images/bg_web_pattern.svg") left top repeat;
   background-size: 130px 150px; }
 
 .section--secondary .section__header {

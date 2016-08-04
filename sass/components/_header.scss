@@ -1,20 +1,44 @@
 .header {
     box-sizing: border-box;
     display: flex;
-    flex-flow: column wrap;
+    height: auto;
+    flex-flow: row wrap;
+    overflow: hidden;
     padding: 15px;
     position: fixed;
+    transition: .4s all ease-in-out;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     z-index: 10;
     @include mq($medium-up) {
-        padding: 25px;
+        padding: 25px 25px 28px;
     }
     @include mq($medium-up) {
-        padding: 25px 40px;
+        padding: 10px 40px 14px;
     }
     &__logo {
         cursor: pointer;
         height: auto;
-        width: 100px;
+        width: 70px;
+    }
+    &--scrolled {
+        background-color: $baseColor;
+        box-shadow: 0 7px 0 5px rgba(darken($accentColor, 10), .5);
+    }
+    .navigation {
+        display: inline-block;
+        overflow: hidden;
+        height: auto;
+        &__link {
+            color: $primaryDarkColor;
+            text-decoration: none;
+            padding: 0 7px;
+            outline: 0;
+            @include mq($medium-up) {
+                font-size: 18px;
+                padding: 0 15px;
+            }
+        }
     }
 }
