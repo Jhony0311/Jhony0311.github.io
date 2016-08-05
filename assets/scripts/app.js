@@ -1,6 +1,6 @@
 'use strict';
-import mainStyle from '../sass/main.scss';
-// import jump from 'jump.js';
+
+import jump from 'jump.js';
 let mainLogo =  document.querySelector('#main-logo');
 let headerBar = document.querySelector('#header');
 let navLinks = document.querySelectorAll('.navigation__link');
@@ -15,13 +15,14 @@ document.addEventListener('scroll', function(e) {
 
 navLinks.forEach(function(link) {
     link.addEventListener('click', function(e) {
-        console.log(e);
         e.preventDefault();
         let target = e.srcElement.hash;
-        // jump(target, {
-        //     duration: 500,
-        //     offset: headerBar.getAttribute('height')
-        // });
+        let distance = document.querySelector(target).offsetTop - window.pageYOffset;
+        let stopPos = stopPos = -(headerBar.clientHeight + 10);
+        jump(target, {
+            duration: 500,
+            offset: stopPos
+        });
         return false;
     })
 }.bind(this));

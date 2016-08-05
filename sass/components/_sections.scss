@@ -57,14 +57,13 @@ body {
         color: $white;
         padding-bottom: 50px;
         @include mq($medium-up) {
-            background-image: url(../assets/images/blue_triangle.svg), url("../assets/images/circuit_design.svg");
+            background-image: url(../images/blue_triangle.svg), url(../images/circuit_design.svg);
             background-position: left top, right center;
             background-size: contain, 22%;
             background-repeat: no-repeat, repeat-y;
             padding-bottom: 25px;
         }
         &::before {
-            // background: transparent url(../assets/images/circuit_design_horizontal.svg) left bottom repeat-x;
             background-size: contain;
             bottom: 0;
             content: " ";
@@ -79,7 +78,7 @@ body {
         }
     }
     &--secondary {
-        background: $baseColor url("../assets/images/bg_web_pattern.svg") left top repeat;
+        background: $baseColor url(../images/bg_web_pattern.svg) left top repeat;
         background-size: 130px 150px;
     }
     &--secondary &__header {

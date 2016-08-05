@@ -1,12 +1,12 @@
+@import "https://fonts.googleapis.com/css?family=Kaushan+Script|Titillium+Web:400,700,300|Amaranth:700";
 
-// @import "https://fonts.googleapis.com/css?family=Kaushan+Script|Titillium+Web:400,700,300|Amaranth:700";
-// @font-face {
-//     font-family: 'glyphs';
-//     src: url('../assets/fonts/glyphs.eot?xtbwm8');
-//     src: url('../assets/fonts/glyphs.eot?xtbwm8#iefix') format('embedded-opentype'), url('../assets/fonts/glyphs.ttf?xtbwm8') format('truetype'), url('../assets/fonts/glyphs.woff?xtbwm8') format('woff'), url('../assets/fonts/glyphs.svg?xtbwm8#glyphs') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'glyphs';
+    src: url('../fonts/glyphs.eot?xtbwm8');
+    src: url('../fonts/glyphs.eot?xtbwm8#iefix') format('embedded-opentype'), url('../fonts/glyphs.ttf?xtbwm8') format('truetype'), url('../fonts/glyphs.woff?xtbwm8') format('woff'), url('../fonts/glyphs.svg?xtbwm8#glyphs') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 [class^="icon-"],
 [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
