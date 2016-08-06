@@ -69,11 +69,11 @@
                 <br>Based in Panama
             </div>
             <div class="display-block__link-group">
-                <a target="_blank" href="https://twitter.com/Jhony0311" class="icon-twitter display-block__link"></a>
-                <a target="_blank" href="https://pa.linkedin.com/in/jonathan-ortega-22538724" class="icon-linkedin display-block__link"></a>
-                <a target="_blank" href="https://github.com/Jhony0311" class="icon-github display-block__link"></a>
-                <a target="_blank" href="https://plus.google.com/+JonathanOrtega0311" class="icon-google-plus display-block__link"></a>
-                <a target="_blank" href="http://codepen.io/Jhony0311/" class="icon-codepen display-block__link"></a>
+                <a target="_blank" onClick="ga('send', 'event', 'click', 'linkOut,' 'socialMedia', 'twitter');" href="https://twitter.com/Jhony0311" class="icon-twitter display-block__link"></a>
+                <a target="_blank" onClick="ga('send', 'event', 'click', 'linkOut,' 'socialMedia', 'linkedin');" href="https://pa.linkedin.com/in/jonathan-ortega-22538724" class="icon-linkedin display-block__link"></a>
+                <a target="_blank" onClick="ga('send', 'event', 'click', 'linkOut,' 'socialMedia', 'github');" href="https://github.com/Jhony0311" class="icon-github display-block__link"></a>
+                <a target="_blank" onClick="ga('send', 'event', 'click', 'linkOut,' 'socialMedia', 'gplus');" href="https://plus.google.com/+JonathanOrtega0311" class="icon-google-plus display-block__link"></a>
+                <a target="_blank" onClick="ga('send', 'event', 'click', 'linkOut,' 'socialMedia', 'codepen');" href="http://codepen.io/Jhony0311/" class="icon-codepen display-block__link"></a>
             </div>
         </div>
     </section>
@@ -259,8 +259,17 @@
             <div class="section__content"></div>
         </section> -->
     <footer class="footer">
-        <p class="footer__text">Designed by <a class="footer__link" target="_blank" href="http://kowa183.wix.com/rogk">Rogelio Kowaleski</a>. Coded by Jonathan Ortega. 2016. All rights reserved</p>
+        <p class="footer__text">Designed by <a class="footer__link" target="_blank" onClick="ga('send', 'event', 'click', 'linkOut,' 'footer', 'Rogelio');" href="http://kowa183.wix.com/rogk">Rogelio Kowaleski</a>. Coded by Jonathan Ortega. 2016. All rights reserved</p>
     </footer>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-82111406-1', 'auto');
+        ga('send', 'pageview');
+    </script>
     <script src="assets/scripts/main.js"></script>
 </body>
 
