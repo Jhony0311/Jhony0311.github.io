@@ -2,7 +2,7 @@
   "name": "jhony0311-github-page",
   "description": "My personal page for GitHub profile",
   "version": "1.5.0",
-  "author": "Jonathan Ortega <mathews.kyle@gmail.com>",
+  "author": "Jonathan Ortega <jortega0389@gmail.com>",
   "homepage": "https://github.com/Jhony0311/Jhony0311.github.io",
   "dependencies": {
     "dotenv": "^4.0.0",
