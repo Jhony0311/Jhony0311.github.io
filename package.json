@@ -5,9 +5,11 @@
   "author": "Jonathan Ortega <mathews.kyle@gmail.com>",
   "homepage": "https://github.com/Jhony0311/Jhony0311.github.io",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "gatsby": "^1.9.145",
     "gatsby-link": "^1.6.32",
-    "gatsby-plugin-react-helmet": "^1.0.8"
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-source-graphcms": "0.0.1"
   },
   "keywords": [
     "gatsby",
